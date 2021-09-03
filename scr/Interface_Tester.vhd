@@ -91,9 +91,9 @@ counter : process (rst, clk)
         tx_cnt_ms := tx_cnt_ms + 1;
       end if;
 
-      if tx_cnt_sec = 500 then
+      if tx_cnt_sec = 250 then
         tx_out <= '1';
-      elsif tx_cnt_sec = 1000 then
+      elsif tx_cnt_sec = 500 then
         tx_out <= '0';
         tx_cnt_sec := 0;
       end if;
