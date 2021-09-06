@@ -221,13 +221,13 @@ signal tx_out_i  : std_logic;
        GPIO_1(32) <= SPI_2_i(29);    -- Pin 36 50-Way 
        GPIO_1(33) <= SPI_2_i(30);    -- Pin 39 50-Way 
        GPIO_2(02) <= SPI_2_i(31);    -- Pin 42 50-Way 
-       GPIO_1(00) <= SPI_2_i(32);    -- Pin 45 50-Way 
+       GPIO_1(00) <= Hunder_mS_i;--SPI_2_i(32);    -- Pin 45 50-Way 
        GPIO_1(01) <= SPI_2_i(33);    -- Pin 46 50-Way 
        GPIO_1(02) <= SPI_2_i(34);    -- Pin 49 50-Way        
        
        RX_i       <= GPIO_2(01);     -- RX FO
        RX_PPS_i   <= GPIO_0_IN(01);  -- RX PPS
-       tx_out_i   <= GPIO_2(00);
+       GPIO_2(06)  <= tx_out_i;
        
 -------------------------------------------------------------------------------    
 --  Instantiations of Modules
