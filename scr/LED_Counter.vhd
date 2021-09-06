@@ -78,7 +78,7 @@ counter : process (rst, clk)
       case led_state is 
         when idle =>
             if main_start = '1' then
-               led_state   <= count_state;
+               led_state   <= Idle;
             else
                led_state   <= idle;
             end if;   
